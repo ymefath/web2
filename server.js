@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 
 // MongoDB connection string
-const uri = "mongodb+srv://yassine:12345yassine@cluster0.rhfeo.mongodb.net/prodata";
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Define an API endpoint to retrieve product data
