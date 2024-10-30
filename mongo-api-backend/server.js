@@ -3,6 +3,7 @@ const { MongoClient } = require('mongodb');
 const app = express();
 const port = 3000;
 
+
 // MongoDB connection string
 const uri = "mongodb+srv://yassine:12345yassine@cluster0.rhfeo.mongodb.net/prodata";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
