@@ -1,7 +1,11 @@
 const express = require('express');
+const cors = require('cors'); // Import CORS
 const { MongoClient } = require('mongodb');
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Use the environment variable for MongoDB connection string
 const uri = process.env.MONGODB_URI;
