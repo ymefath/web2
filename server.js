@@ -15,7 +15,7 @@ app.get('/api/products', async (req, res) => {
     try {
         await client.connect();
         const database = client.db("prodata"); // Replace "prodata" with your actual database name if different
-        const collection = database.collection("serb"); // Replace "serb" with your collection name
+        const collection = database.collection("datafin"); // Replace "serb" with your collection name
 
         const products = await collection.find({}).toArray();
         res.json(products);
